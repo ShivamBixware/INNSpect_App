@@ -1,9 +1,7 @@
-// frontend/src/App.js
-// import '../assets/css/carousel.min.css';
+
 import React, { useEffect, useState } from 'react';
 import RegistrationForm from './Components/Registration';
 import ManageCompany from './Components/ManageCompany';
-import ManageCompanies from './Components/ManageCompanies';
 import SignInPage from './Components/Login';
 import DashboardSuperAdmin from './Components/DashboardSuperAdmin';
 import SetUPSuperAdmin from "./Components/SetUp";
@@ -19,6 +17,7 @@ import AuditTemplateView from './Components/AuditTemplateView'
 import TemplateReview from './Components/TemplateReview'
 import { jwtDecode } from 'jwt-decode';
 import EmailTemplateModule from './Components/EmailTemplate'
+
 
 
 function App() {
@@ -83,8 +82,7 @@ function App() {
           
           <Route path="/" element={<Navigate to="/Login" />} />
           <Route path="/Registration" element={<RegistrationForm />}></Route>
-          <Route path="/ManageCompany" element={<ManageCompany/>}></Route>
-          {/* <Route path="/ManageCompany" element={<ManageCompanies/>}></Route> */}
+          <Route path="/ManageCompany" element={<ManageCompany/>}></Route> 
           <Route path="/Login" element={<SignInPage />}></Route>
           <Route path={`SuperAdmin/Dashboard`} element={<DashboardSuperAdmin />}></Route>
           <Route path={"/SetUp"} element={<SetUPSuperAdmin />}></Route>
